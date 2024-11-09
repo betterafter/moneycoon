@@ -24,15 +24,15 @@ class MainScreen extends ConsumerWidget {
       home: Scaffold(
         body: _pages[ref.watch(bottomNavigationBarIndexProvider)],
         bottomNavigationBar: BottomNavigationBar(
+          iconSize: 28,
           onTap: (index) {
             ref.read(bottomNavigationBarIndexProvider.notifier).setIndex(index);
           },
-          selectedLabelStyle: const TextStyle(
-            color: Colors.black,
-          ),
-          unselectedLabelStyle: const TextStyle(
-            color: Colors.black,
-          ),
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.black,
+          enableFeedback: false,
+          type: BottomNavigationBarType.fixed,
+          selectedFontSize: 14,
           currentIndex: ref.watch(bottomNavigationBarIndexProvider),
           items: [
             BottomNavigationBarItem(
