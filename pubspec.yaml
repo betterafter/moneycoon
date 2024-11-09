@@ -11,6 +11,15 @@ dependencies:
   flutter:
     sdk: flutter
 
+  get_it: 7.0.0
+
+  data:
+    path: packages/data
+  domain:
+    path: packages/domain
+  presentation:
+    path: packages/presentation
+
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
