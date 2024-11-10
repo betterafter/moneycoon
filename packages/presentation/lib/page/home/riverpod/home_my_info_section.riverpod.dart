@@ -1,9 +1,9 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'calendar_click.rp.g.dart';
+part 'home_my_info_section.riverpod.g.dart';
 
 @riverpod
-class CalendarClick extends _$CalendarClick {
+class HomeCalendarClick extends _$HomeCalendarClick {
   static const double minSize = 120;
   static const double maxSize = 150;
 

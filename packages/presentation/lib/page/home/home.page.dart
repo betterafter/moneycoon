@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:presentation/page/home/widget/bottom_ranking_section.widget.dart';
+import 'package:presentation/page/home/widget/middle_banner_section.widget.dart';
 import 'package:presentation/page/home/widget/top_my_section.widget.dart';
+import 'package:presentation/util/color.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -32,41 +35,47 @@ class HomePage extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 200),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Stack(
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: MediaQuery.of(context).size.height,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color.fromARGB(255, 241, 241, 241),
-                                  blurRadius: 16,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(16),
-                                topRight: Radius.circular(16),
+                    child: Stack(
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          decoration: const BoxDecoration(
+                            color: AppColor.primaryWhite,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color.fromARGB(255, 241, 241, 241),
+                                blurRadius: 16,
                               ),
+                            ],
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(16),
+                              topRight: Radius.circular(16),
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.only(
+                              top: 60,
+                              left: 20,
+                              right: 20,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                MiddleBannerSectionWidget(),
+                                BottomRankingSection(),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  TopMySectionWidget(
+                  const TopMySectionWidget(
                     myPoint: 1000,
                     totalPoint: 10000,
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

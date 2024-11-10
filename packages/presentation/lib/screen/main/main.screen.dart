@@ -6,6 +6,7 @@ import 'package:presentation/page/my/my.page.dart';
 import 'package:presentation/page/reviewers/reviewers.page.dart';
 import 'package:presentation/page/store/store.page.dart';
 import 'package:presentation/screen/main/riverpod/bottom_navigation_bar.rp.dart';
+import 'package:presentation/util/color.dart';
 
 class MainScreen extends ConsumerWidget {
   const MainScreen({super.key});
@@ -43,7 +44,7 @@ class MainScreen extends ConsumerWidget {
               activeIcon: _activeIcon(
                 icon: Icons.home_filled,
                 label: '홈',
-                color: Colors.blue,
+                color: AppColor.primaryBlue,
               ),
               label: '홈',
             ),
@@ -67,7 +68,7 @@ class MainScreen extends ConsumerWidget {
               activeIcon: _activeIcon(
                 icon: Icons.card_giftcard_rounded,
                 label: '상점',
-                color: Colors.green,
+                color: AppColor.primaryGreen,
               ),
               label: '상점',
             ),

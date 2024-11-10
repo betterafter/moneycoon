@@ -1,9 +1,7 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:presentation/common/point_icon.widget.dart';
-import 'package:presentation/page/home/riverpod/calendar_click.rp.dart';
+import 'package:presentation/page/home/riverpod/home_my_info_section.riverpod.dart';
 
 class TopMySectionWidget extends ConsumerWidget {
   final int myPoint;
@@ -72,14 +70,14 @@ class TopMySectionWidget extends ConsumerWidget {
           ),
           GestureDetector(
             onTapDown: (details) async {
-              ref.read(calendarClickProvider.notifier).setPressed(true);
+              ref.read(homeCalendarClickProvider.notifier).setPressed(true);
             },
             onTap: () async {
-              ref.read(calendarClickProvider.notifier).setPressed(false);
+              ref.read(homeCalendarClickProvider.notifier).setPressed(false);
             },
             child: Stack(
               children: [
-                if (ref.read(calendarClickProvider.notifier).isClicked)
+                if (ref.read(homeCalendarClickProvider.notifier).isClicked)
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -133,11 +131,11 @@ class TopMySectionWidget extends ConsumerWidget {
                   margin: const EdgeInsets.only(top: 60),
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 50),
-                    width: ref.watch(calendarClickProvider),
-                    height: ref.watch(calendarClickProvider),
+                    width: ref.watch(homeCalendarClickProvider),
+                    height: ref.watch(homeCalendarClickProvider),
                     child: Image.asset(
                       'packages/presentation/assets/images/calendar.png',
-                      width: ref.watch(calendarClickProvider),
+                      width: ref.watch(homeCalendarClickProvider),
                     ),
                   ),
                 ),
