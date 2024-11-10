@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:presentation/common/point.widget.dart';
 import 'package:presentation/common/point_icon.widget.dart';
 import 'package:presentation/page/home/riverpod/home_my_info_section.riverpod.dart';
 
@@ -44,7 +45,9 @@ class TopMySectionWidget extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(width: 4),
-                  const PointIconWidget(),
+                  const PointWidget(
+                    size: 20,
+                  ),
                 ],
               ),
               Row(
@@ -58,8 +61,8 @@ class TopMySectionWidget extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(width: 4),
-                  const PointIconWidget(
-                    size: 16,
+                  const PointWidget(
+                    size: 10,
                     borderColor: Colors.grey,
                     backgroundColor: Colors.transparent,
                     textColor: Colors.grey,

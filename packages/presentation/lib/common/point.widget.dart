@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 
 class PointWidget extends StatelessWidget {
+  final double? size;
   final Color? borderColor;
   final Color? backgroundColor;
   final Color? textColor;
-  final double? fontSize;
 
   const PointWidget({
     super.key,
+    this.size = 16,
     this.borderColor = Colors.amber,
     this.backgroundColor = Colors.amber,
     this.textColor = Colors.white,
-    this.fontSize = 14,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: fontSize! * 1.5,
-      height: fontSize! * 1.5,
+      width: size! * 1.5,
+      height: size! * 1.5,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         color: backgroundColor ?? Colors.grey,
         borderRadius: BorderRadius.circular(100),
@@ -29,8 +30,8 @@ class PointWidget extends StatelessWidget {
         style: TextStyle(
           color: textColor,
           fontWeight: FontWeight.bold,
-          fontSize: fontSize,
-          height: 1.2,
+          fontSize: size,
+          height: 1.0,
         ),
         textAlign: TextAlign.center,
       ),
