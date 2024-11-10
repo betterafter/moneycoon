@@ -23,7 +23,7 @@ final homeBannerProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef HomeBannerRef = AutoDisposeFutureProviderRef<List<HomeBannerEntity>?>;
-String _$bannerControllerHash() => r'f6bc4c1372a89579700e2b77e4eb52eeb6a5e4ca';
+String _$bannerControllerHash() => r'25c1018e2ee229a690fe3d9cbb7944ca8c76838c';
 
 /// See also [BannerController].
 @ProviderFor(BannerController)

@@ -1,4 +1,8 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get_it/get_it.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:domain/entity/my_info.entity.dart';
+import 'package:domain/usecase/my_info.usecase.dart';
 
 part 'home_my_info_section.riverpod.g.dart';
 
@@ -26,4 +30,10 @@ class HomeCalendarClick extends _$HomeCalendarClick {
       isClicked = true;
     }
   }
+}
+
+@riverpod
+Future<MyInfoEntity?> myInfoProvider(Ref ref) async {
+  final myInfoUsecase = GetIt.instance.get<MyInfoUsecase>();
+  return await myInfoUsecase.getMyInfo();
 }

@@ -15,6 +15,12 @@ class TopMySectionWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final myInfo = ref.watch(myInfoProviderProvider).when(
+          data: (data) => data,
+          error: (error, stack) => null,
+          loading: () => null,
+        );
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
@@ -34,7 +40,7 @@ class TopMySectionWidget extends ConsumerWidget {
               Row(
                 children: [
                   Text(
-                    '$myPoint',
+                    '${myInfo?.point}',
                     style: const TextStyle(
                       fontSize: 36,
                       color: Colors.black,
@@ -49,7 +55,7 @@ class TopMySectionWidget extends ConsumerWidget {
               Row(
                 children: [
                   Text(
-                    '누적 $totalPoint',
+                    '누적 ${myInfo?.totalDonationAmount}',
                     style: const TextStyle(
                       fontSize: 16,
                       letterSpacing: -1,
