@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:presentation/page/booup/booup.page.dart';
 import 'package:presentation/page/home/home.page.dart';
 import 'package:presentation/page/my/my.page.dart';
-import 'package:presentation/page/reviewers/reviewers.page.dart';
 import 'package:presentation/page/store/store.page.dart';
 import 'package:presentation/screen/main/riverpod/bottom_navigation_bar.rp.dart';
 import 'package:presentation/util/color.dart';
@@ -13,9 +11,7 @@ class MainScreen extends ConsumerWidget {
 
   static const List<Widget> _pages = [
     HomePage(),
-    BooupPage(),
     StorePage(),
-    ReviewersPage(),
     MyPage(),
   ];
 
