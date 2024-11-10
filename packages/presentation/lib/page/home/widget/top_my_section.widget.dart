@@ -82,61 +82,71 @@ class TopMySectionWidget extends ConsumerWidget {
               ref.read(homeCalendarClickProvider.notifier).setPressed(false);
             },
             child: Stack(
+              alignment: Alignment.topRight,
               children: [
-                if (ref.read(homeCalendarClickProvider.notifier).isClicked)
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 100,
-                        height: 36,
-                        alignment: Alignment.center,
-                        margin: const EdgeInsets.only(top: 76, left: 28),
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 21, 21, 21),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                '출석 완료',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                              SizedBox(width: 4),
-                              Icon(
-                                Icons.check,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      height: 36,
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(top: 76, right: 28),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 21, 21, 21),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              ref
+                                      .read(homeCalendarClickProvider.notifier)
+                                      .isClicked
+                                  ? '출석 완료'
+                                  : '출석체크 잊지마세요!',
+                              style: const TextStyle(
                                 color: Colors.white,
-                                size: 16,
+                                fontWeight: FontWeight.w600,
                               ),
-                            ],
-                          ),
+                              textAlign: TextAlign.center,
+                            ),
+                            if (ref
+                                .read(homeCalendarClickProvider.notifier)
+                                .isClicked)
+                              const Row(
+                                children: [
+                                  SizedBox(width: 4),
+                                  Icon(
+                                    Icons.check,
+                                    color: Colors.white,
+                                    size: 16,
+                                  ),
+                                ],
+                              )
+                          ],
                         ),
                       ),
-                      Container(
-                        margin: const EdgeInsets.only(right: 9),
-                        child: ClipPath(
-                          clipper: TriangleClipper(),
-                          child: Container(
-                            width: 12,
-                            height: 7,
-                            color: Colors.black,
-                          ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(right: 37),
+                      child: ClipPath(
+                        clipper: TriangleClipper(),
+                        child: Container(
+                          width: 12,
+                          height: 7,
+                          color: Colors.black,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
+                ),
                 Container(
                   height: 180 + 60,
                   margin: const EdgeInsets.only(top: 60),
                   child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 50),
+                    duration: const Duration(milliseconds: 200),
                     width: ref.watch(homeCalendarClickProvider),
                     height: ref.watch(homeCalendarClickProvider),
                     child: Image.asset(
