@@ -4,13 +4,8 @@ import 'package:presentation/common/point_icon.widget.dart';
 import 'package:presentation/page/home/riverpod/home_my_info_section.riverpod.dart';
 
 class TopMySectionWidget extends ConsumerWidget {
-  final int myPoint;
-  final int totalPoint;
-
   const TopMySectionWidget({
     super.key,
-    required this.myPoint,
-    required this.totalPoint,
   });
 
   @override
@@ -90,7 +85,7 @@ class TopMySectionWidget extends ConsumerWidget {
                     Container(
                       height: 36,
                       alignment: Alignment.center,
-                      margin: const EdgeInsets.only(top: 76, right: 28),
+                      margin: const EdgeInsets.only(top: 20, right: 28),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 21, 21, 21),
                         borderRadius: BorderRadius.circular(12),
@@ -144,7 +139,7 @@ class TopMySectionWidget extends ConsumerWidget {
                 ),
                 Container(
                   height: 180 + 60,
-                  margin: const EdgeInsets.only(top: 60),
+                  margin: const EdgeInsets.only(top: 0),
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 200),
                     width: ref.watch(homeCalendarClickProvider),

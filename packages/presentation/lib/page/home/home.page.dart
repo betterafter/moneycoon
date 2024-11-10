@@ -12,6 +12,8 @@ class HomePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          scrolledUnderElevation: 0,
+          backgroundColor: Colors.transparent,
           leading: Container(
             padding: const EdgeInsets.only(left: 16),
             child: Image.asset(
@@ -34,7 +36,7 @@ class HomePage extends StatelessWidget {
               Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 200),
+                    padding: const EdgeInsets.only(top: 160),
                     child: Stack(
                       children: [
                         Container(
@@ -70,10 +72,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const TopMySectionWidget(
-                    myPoint: 1000,
-                    totalPoint: 10000,
-                  ),
+                  const TopMySectionWidget(),
                 ],
               ),
             ],
