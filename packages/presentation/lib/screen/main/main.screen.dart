@@ -50,18 +50,6 @@ class MainScreen extends ConsumerWidget {
             ),
             BottomNavigationBarItem(
               icon: _inactiveIcon(
-                icon: Icons.money_rounded,
-                label: '부업',
-              ),
-              activeIcon: _activeIcon(
-                icon: Icons.money_rounded,
-                label: '부업',
-                color: Colors.amber,
-              ),
-              label: '부업',
-            ),
-            BottomNavigationBarItem(
-              icon: _inactiveIcon(
                 icon: Icons.card_giftcard_rounded,
                 label: '상점',
               ),
@@ -71,18 +59,6 @@ class MainScreen extends ConsumerWidget {
                 color: AppColor.primaryGreen,
               ),
               label: '상점',
-            ),
-            BottomNavigationBarItem(
-              icon: _inactiveIcon(
-                icon: Icons.reviews_rounded,
-                label: '체험단',
-              ),
-              activeIcon: _activeIcon(
-                icon: Icons.reviews_rounded,
-                label: '체험단',
-                color: Colors.red,
-              ),
-              label: '체험단',
             ),
             BottomNavigationBarItem(
               icon: _inactiveIcon(
