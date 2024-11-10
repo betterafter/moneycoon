@@ -34,6 +34,8 @@ class MiddleBannerSectionWidget extends ConsumerWidget {
                 borderRadius: BorderRadius.circular(16),
                 child: Image.network(
                   homeBanner?[index % (homeBanner.length)].imageUrl ?? '',
+                  errorBuilder: (context, error, stack) =>
+                      const SizedBox.shrink(),
                   fit: BoxFit.cover,
                 ),
               );
