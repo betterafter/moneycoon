@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:presentation/common/point.widget.dart';
+import 'package:presentation/common/point_icon.widget.dart';
+import 'package:presentation/page/home/riverpod/home_my_info_section.riverpod.dart';
 
-class StorePage extends StatelessWidget {
+class StorePage extends ConsumerWidget {
   const StorePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final myInfo = ref.watch(myInfoProviderProvider);
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -22,8 +27,8 @@ class StorePage extends StatelessWidget {
             ),
           ),
           actions: [
-            const PointWidget(),
-            const SizedBox(width: 16),
+            PointButtonWidget(point: myInfo.value?.point ?? 0),
+            const SizedBox(width: 2),
             IconButton(
               onPressed: () {},
               icon: const Icon(
