@@ -1,9 +1,5 @@
-import 'dart:math';
-
-import 'package:domain/entity/visit_ranker.entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:presentation/common/point.widget.dart';
 import 'package:presentation/page/home/riverpod/home_visit_ranker_section.riverpod.dart';
 import 'package:presentation/page/home/widget/bottom_ranking_section_item.widget.dart';
 import 'package:presentation/util/color.dart';
