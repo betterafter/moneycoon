@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
+import 'package:presentation/common/point.widget.dart';
 import 'package:presentation/util/color.dart';
+import 'package:presentation/util/util.dart';
 
 class CategoryItemWidget extends StatelessWidget {
   final String icon;
@@ -106,16 +108,46 @@ class StoreItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
+          padding: const EdgeInsets.all(4),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(100),
-            color: AppColor.iconGrey,
+            borderRadius: BorderRadius.circular(12),
           ),
-          child: Image.network(image),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.network(image),
+          ),
         ),
-        Text(title),
-        Text(price),
+        const SizedBox(height: 8),
+        Padding(
+          padding: const EdgeInsets.only(left: 8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text(
+                    price.toPriceWithComma(),
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  const PointWidget(size: 8),
+                ],
+              ),
+              Text(
+                title,
+                style: const TextStyle(fontSize: 16),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ),
+        )
       ],
     );
   }

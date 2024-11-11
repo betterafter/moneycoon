@@ -17,7 +17,7 @@ class BottomItemsSectionWidget extends ConsumerWidget {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 1 / 1.2,
+        childAspectRatio: 1 / 1.6,
       ),
       itemBuilder: (context, index) {
         return StoreItemWidget(
