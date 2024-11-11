@@ -4,6 +4,7 @@ import 'package:presentation/common/point.widget.dart';
 import 'package:presentation/common/point_icon.widget.dart';
 import 'package:presentation/page/home/riverpod/home_my_info_section.riverpod.dart';
 import 'package:presentation/page/store/widget/middle_section.widget.dart';
+import 'package:presentation/page/store/widget/tab_section.widget.dart';
 
 class StorePage extends ConsumerWidget {
   const StorePage({super.key});
@@ -40,11 +41,12 @@ class StorePage extends ConsumerWidget {
             ),
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+        body: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
               MiddleSectionWidget(),
+              TabSectionWidget(),
             ],
           ),
         ),

@@ -14,11 +14,22 @@ class StoreRepositoryImpl implements StoreRepository {
     var data = await storeApi.getCategoryList();
     return data.on(
       success: (data) => compute(
-        (data) =>
-            data!.map((e) => StoreCategoryEntity.fromJson(e.toJson())).toList(),
+        (data) {
+          return data!.map(
+            (e) {
+              var categoryJson = e.toJson();
+              categoryJson['store'] = e.store.map((e) {
+                return e.toJson();
+              }).toList();
+              return StoreCategoryEntity.fromJson(categoryJson);
+            },
+          ).toList();
+        },
         data,
       ),
-      error: (error, stackTrace) => throw Exception(error),
+      error: (error, stackTrace) {
+        throw Exception(error);
+      },
     );
   }
 
