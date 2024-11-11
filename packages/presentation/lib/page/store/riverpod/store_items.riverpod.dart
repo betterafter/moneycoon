@@ -21,13 +21,13 @@ class SelectedCategory extends _$SelectedCategory {
   Future<(String, String)> build() async {
     final usecase = GetIt.instance.get<StoreUsecase>();
     categoryList = await usecase.getCategoryList();
-    return (categoryList.first.category, categoryList.first.store.first);
+    return (categoryList.first.category, categoryList.first.store.first.name);
   }
 
   void setCategory(String category) {
     var store =
         categoryList.firstWhere((e) => e.category == category).store.first;
-    state = AsyncValue.data((category, store));
+    state = AsyncValue.data((category, store.name));
   }
 
   void setStore(String store) {

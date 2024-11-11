@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:presentation/common/point.widget.dart';
 import 'package:presentation/common/point_icon.widget.dart';
 import 'package:presentation/page/home/riverpod/home_my_info_section.riverpod.dart';
+import 'package:presentation/page/store/widget/middle_section.widget.dart';
 
 class StorePage extends ConsumerWidget {
   const StorePage({super.key});
@@ -17,6 +18,7 @@ class StorePage extends ConsumerWidget {
           scrolledUnderElevation: 0,
           backgroundColor: Colors.transparent,
           leading: Container(
+            alignment: Alignment.centerLeft,
             padding: const EdgeInsets.only(left: 16),
             child: const Text(
               '상점',
@@ -37,6 +39,14 @@ class StorePage extends ConsumerWidget {
               ),
             ),
           ],
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              MiddleSectionWidget(),
+            ],
+          ),
         ),
       ),
     );
