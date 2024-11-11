@@ -8,9 +8,21 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'store_items.riverpod.g.dart';
 
 @riverpod
-Future<List<StoreItemEntity>> storeItems(Ref ref, String url) async {
+Future<List<StoreItemEntity>> storeItems(Ref ref) async {
+  final selectedCategory = ref.watch(selectedCategoryProvider);
+  final category = selectedCategory.value?.$1;
+  final store = selectedCategory.value?.$2;
+
+  print('category: $category, store: $store');
+
+  if (category == null || store == null) {
+    return [];
+  }
+
   final storeUsecase = GetIt.instance.get<StoreUsecase>();
-  return storeUsecase.getStoreItems(url);
+  return storeUsecase.getStoreItems(
+    'https://moneycoon.api.com/$category/$store',
+  );
 }
 
 @riverpod

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:presentation/common/point_icon.widget.dart';
 import 'package:presentation/page/home/riverpod/home_my_info_section.riverpod.dart';
+import 'package:presentation/page/store/widget/bottom_items_section.widget.dart';
 import 'package:presentation/page/store/widget/middle_section.widget.dart';
 import 'package:presentation/page/store/widget/tab_section.widget.dart';
 
@@ -47,6 +48,8 @@ class StorePage extends ConsumerWidget {
               MiddleSectionWidget(),
               SizedBox(height: 16),
               TabSectionWidget(),
+              SizedBox(height: 16),
+              Expanded(child: BottomItemsSectionWidget()),
             ],
           ),
         ),

@@ -21,22 +21,24 @@ class StoreApi {
   }
 
   Future<ApiState<List<StoreItemDto>>> getStoreItems(String url) async {
-    Uri uri = Uri.parse(url);
-    var path = uri.path;
-    var category = path.split('/').first;
-    var fileName = path.split('/').last;
+    try {
+      Uri uri = Uri.parse(url);
+      var path = uri.path;
 
-    var json = await rootBundle.loadString(
-      'packages/data/assets/json/$category/${fileName}_items.json',
-    );
-
-    var dataMap = await compute((message) async {
-      var json = await jsonDecode(message) as List<dynamic>;
-      return ApiState.success(
-        data: json.map((e) => StoreItemDto.fromJson(e)).toList(),
+      var json = await rootBundle.loadString(
+        'packages/data/assets/json${path}_items.json',
       );
-    }, json);
 
-    return dataMap;
+      var dataMap = await compute((message) async {
+        var json = await jsonDecode(message) as List<dynamic>;
+        return ApiState.success(
+          data: json.map((e) => StoreItemDto.fromJson(e)).toList(),
+        );
+      }, json);
+
+      return dataMap;
+    } catch (e) {
+      return ApiState.error(data: null, exception: e as Exception);
+    }
   }
 }

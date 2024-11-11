@@ -11,8 +11,8 @@ class TabSectionWidget extends ConsumerWidget {
     var categoryList =
         ref.watch(selectedCategoryProvider.notifier).categoryList;
 
-    var categoryItem = ref.watch(selectedCategoryProvider).value!.$1;
-    var storeItem = ref.watch(selectedCategoryProvider).value!.$2;
+    var categoryItem = ref.watch(selectedCategoryProvider).value?.$1;
+    var storeItem = ref.watch(selectedCategoryProvider).value?.$2;
 
     return Column(
       children: [
