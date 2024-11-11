@@ -3,6 +3,8 @@ import 'package:presentation/common/divier.dart';
 import 'package:presentation/page/my/widget/kun_manage_section.widget.dart';
 import 'package:presentation/page/my/widget/profile_section.widget.dart';
 import 'package:presentation/page/my/widget/reviewer_manage_section.widget.dart';
+import 'package:presentation/page/my/widget/service_section.widget.dart';
+import 'package:presentation/util/color.dart';
 
 class MyPage extends StatelessWidget {
   const MyPage({super.key});
@@ -36,11 +38,11 @@ class MyPage extends StatelessWidget {
             ),
           ],
         ),
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   children: [
@@ -51,14 +53,34 @@ class MyPage extends StatelessWidget {
                   ],
                 ),
               ),
-              DividerWidget(),
-              SizedBox(height: 36),
-              Padding(
+              const DividerWidget(),
+              const SizedBox(height: 36),
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: ReviewerManageSectionWidget(),
               ),
-              SizedBox(height: 36),
-              DividerWidget(),
+              const SizedBox(height: 36),
+              const DividerWidget(),
+              const SizedBox(height: 36),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: ServiceSectionWidget(),
+              ),
+              const SizedBox(height: 36),
+              Container(
+                height: 100,
+                color: AppColor.backgroundGrey,
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    children: [
+                      Icon(Icons.logout),
+                      SizedBox(width: 8),
+                      Text('로그아웃'),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
