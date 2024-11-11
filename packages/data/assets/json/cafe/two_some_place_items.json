@@ -1,0 +1,32 @@
+[
+    {
+        "name": "바나나 샷 라떼",
+        "price": 3000,
+        "imgUrl": "https://mcdn.twosome.co.kr/menu_image/P_MA_Z_TSPLC_MENU_REG/1000/1000/PITEM/10191981_01_01_20240924093738.jpg?width=276&height=276&q=100"
+    },
+    {
+        "name": "바나나 샷 아메리카노",
+        "price": 4000,
+        "imgUrl": "https://mcdn.twosome.co.kr/menu_image/P_MA_Z_TSPLC_MENU_REG/1000/1000/PITEM/10191980_01_01_20240924093653.jpg?width=276&height=276&q=100"
+    },
+    {
+        "name": "복숭아 아샷추",
+        "price": 3000,
+        "imgUrl": "https://mcdn.twosome.co.kr/menu_image/P_MA_Z_TSPLC_MENU_REG/1000/1000/PITEM/10191950_01_01_20240618085853.jpg?width=276&height=276&q=100"
+    },
+    {
+        "name": "바닐라 라떼",
+        "price": 3800,
+        "imgUrl": "https://mcdn.twosome.co.kr/menu_image/P_MA_Z_TSPLC_MENU_REG/1000/1000/PITEM/105.png?width=276&height=276&q=100"
+    },
+    {
+        "name": "아메리카노",
+        "price": 2400,
+        "imgUrl": "https://mcdn.twosome.co.kr/menu_image/P_MA_Z_TSPLC_MENU_REG/1000/1000/PITEM/10100001_01_01_20210611.jpg?width=276&height=276&q=100"
+    },
+    {
+        "name": "카푸치노",
+        "price": 3000,
+        "imgUrl": "https://mcdn.twosome.co.kr/menu_image/P_MA_Z_TSPLC_MENU_REG/1000/1000/PITEM/174.png?width=276&height=276&q=100"
+    }
+]

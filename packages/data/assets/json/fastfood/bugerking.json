@@ -1,0 +1,27 @@
+[
+    {
+        "name": "오리지널스 화이트페타",
+        "price": 6400,
+        "imgUrl": "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/fe298b40-09df-4b56-bf60-7b019a3d8bc2.png"
+    },
+    {
+        "name": "딥 트러플 머쉬룸",
+        "price": 7600,
+        "imgUrl": "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/5f8ddc44-95c4-41c5-b172-14e40501aced.png"
+    },
+    {
+        "name": "트러플 머쉬룸 와퍼",
+        "price": 8400,
+        "imgUrl": "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/097a8e8d-7d91-4140-97f5-e26170f03a27.png"
+    },
+    {
+        "name": "몬스터 와퍼",
+        "price": 7200,
+        "imgUrl": "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/bb6bdd7a-c872-47d3-925a-94da7f2bb266.png"
+    },
+    {
+        "name": "통새우 와퍼",
+        "price": 5600,
+        "imgUrl": "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/91999994-df3f-46c0-9632-122e63c7fa40.png"
+    }
+]

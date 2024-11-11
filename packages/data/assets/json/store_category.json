@@ -1,0 +1,24 @@
+[
+    {
+        "category": "cafe",
+        "store": [
+            "starbucks",
+            "two_some_place"
+        ]
+    },
+    {
+        "category": "conv_store",
+        "store": [
+            "cu",
+            "gs"
+        ]
+    },
+    {
+        "category": "fastfood",
+        "store": [
+            "bugerking",
+            "lotteria",
+            "macdonald"
+        ]
+    }
+]
