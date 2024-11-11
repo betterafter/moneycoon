@@ -7,11 +7,13 @@ part 'store_category.dto.g.dart';
 @JsonSerializable()
 class StoreCategoryDto {
   final String category;
+  final String title;
   final String icon;
   final List<StoreCategoryItemDto> store;
 
   StoreCategoryDto({
     required this.category,
+    required this.title,
     required this.icon,
     required this.store,
   });

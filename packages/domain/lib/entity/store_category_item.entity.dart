@@ -5,10 +5,12 @@ part 'store_category_item.entity.g.dart';
 @JsonSerializable()
 class StoreCategoryItemEntity {
   final String name;
+  final String title;
   final String icon;
 
   StoreCategoryItemEntity({
     required this.name,
+    required this.title,
     required this.icon,
   });
 

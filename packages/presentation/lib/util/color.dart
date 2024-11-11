@@ -15,4 +15,6 @@ class AppColor {
   static const Color dividerGrey = Color.fromARGB(255, 243, 243, 243);
   static const Color iconGrey = Color.fromARGB(255, 189, 189, 189);
   static const Color backgroundGrey = Color.fromARGB(255, 237, 241, 244);
+
+  static const Color defaultTransparent = Colors.transparent;
 }

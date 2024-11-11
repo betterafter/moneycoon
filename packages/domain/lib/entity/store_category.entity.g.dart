@@ -9,6 +9,7 @@ part of 'store_category.entity.dart';
 StoreCategoryEntity _$StoreCategoryEntityFromJson(Map<String, dynamic> json) =>
     StoreCategoryEntity(
       category: json['category'] as String,
+      title: json['title'] as String,
       icon: json['icon'] as String,
       store: (json['store'] as List<dynamic>)
           .map((e) =>
@@ -20,6 +21,7 @@ Map<String, dynamic> _$StoreCategoryEntityToJson(
         StoreCategoryEntity instance) =>
     <String, dynamic>{
       'category': instance.category,
+      'title': instance.title,
       'icon': instance.icon,
       'store': instance.store,
     };

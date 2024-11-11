@@ -16,27 +16,32 @@ class TabSectionWidget extends ConsumerWidget {
     return Column(
       children: [
         if (categoryList != null && categoryList.isNotEmpty)
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: categoryList.entries
-                  .map(
-                    (e) => GestureDetector(
-                      onTap: () {
-                        ref
-                            .read(selectedCategoryProvider.notifier)
-                            .setCategory(e.key);
-                      },
-                      child: CategoryItemWidget(
-                        icon: e.value.icon,
-                        title: e.key,
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: categoryList.entries
+                    .map(
+                      (e) => GestureDetector(
+                        onTap: () {
+                          ref
+                              .read(selectedCategoryProvider.notifier)
+                              .setCategory(e.key);
+                        },
+                        child: CategoryItemWidget(
+                          icon: e.value.icon,
+                          title: e.value.title,
+                          isClicked: e.key == storeItems,
+                        ),
                       ),
-                    ),
-                  )
-                  .toList(),
+                    )
+                    .toList(),
+              ),
             ),
           ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 36),
         if (categoryList != null &&
             categoryList[storeItems] != null &&
             categoryList[storeItems]!.store.isNotEmpty)
@@ -53,7 +58,7 @@ class TabSectionWidget extends ConsumerWidget {
                         },
                         child: CategoryStoreItemWidget(
                           icon: e.icon,
-                          title: e.name,
+                          title: e.title,
                         ),
                       ))
                   .toList(),

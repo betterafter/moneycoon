@@ -46,6 +46,7 @@ class StorePage extends ConsumerWidget {
           child: Column(
             children: [
               MiddleSectionWidget(),
+              SizedBox(height: 16),
               TabSectionWidget(),
             ],
           ),

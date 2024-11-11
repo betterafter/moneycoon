@@ -9,6 +9,7 @@ part of 'store_category.dto.dart';
 StoreCategoryDto _$StoreCategoryDtoFromJson(Map<String, dynamic> json) =>
     StoreCategoryDto(
       category: json['category'] as String,
+      title: json['title'] as String,
       icon: json['icon'] as String,
       store: (json['store'] as List<dynamic>)
           .map((e) => StoreCategoryItemDto.fromJson(e as Map<String, dynamic>))
@@ -18,6 +19,7 @@ StoreCategoryDto _$StoreCategoryDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$StoreCategoryDtoToJson(StoreCategoryDto instance) =>
     <String, dynamic>{
       'category': instance.category,
+      'title': instance.title,
       'icon': instance.icon,
       'store': instance.store,
     };
