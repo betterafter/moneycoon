@@ -159,7 +159,7 @@ class _StoreItemsProviderElement
   String get url => (origin as StoreItemsProvider).url;
 }
 
-String _$selectedCategoryHash() => r'452c2afa74317acb17dd4e78bf713f68b89e26a4';
+String _$selectedCategoryHash() => r'87973cfeb7b2a3546a04da568c5d1ca6522db056';
 
 /// See also [SelectedCategory].
 @ProviderFor(SelectedCategory)
