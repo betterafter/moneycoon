@@ -11,7 +11,8 @@ class TabSectionWidget extends ConsumerWidget {
     var categoryList =
         ref.watch(selectedCategoryProvider.notifier).categoryList;
 
-    var storeItems = ref.watch(selectedCategoryProvider).value!.$1;
+    var categoryItem = ref.watch(selectedCategoryProvider).value!.$1;
+    var storeItem = ref.watch(selectedCategoryProvider).value!.$2;
 
     return Column(
       children: [
@@ -33,7 +34,7 @@ class TabSectionWidget extends ConsumerWidget {
                         child: CategoryItemWidget(
                           icon: e.value.icon,
                           title: e.value.title,
-                          isClicked: e.key == storeItems,
+                          isClicked: e.key == categoryItem,
                         ),
                       ),
                     )
@@ -43,25 +44,29 @@ class TabSectionWidget extends ConsumerWidget {
           ),
         const SizedBox(height: 36),
         if (categoryList != null &&
-            categoryList[storeItems] != null &&
-            categoryList[storeItems]!.store.isNotEmpty)
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: categoryList[storeItems]!
-                  .store
-                  .map((e) => GestureDetector(
-                        onTap: () {
-                          ref
-                              .read(selectedCategoryProvider.notifier)
-                              .setStore(e.name);
-                        },
-                        child: CategoryStoreItemWidget(
-                          icon: e.icon,
-                          title: e.title,
-                        ),
-                      ))
-                  .toList(),
+            categoryList[categoryItem] != null &&
+            categoryList[categoryItem]!.store.isNotEmpty)
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: categoryList[categoryItem]!
+                    .store
+                    .map((e) => GestureDetector(
+                          onTap: () {
+                            ref
+                                .read(selectedCategoryProvider.notifier)
+                                .setStore(e.name);
+                          },
+                          child: CategoryStoreItemWidget(
+                            icon: e.icon,
+                            title: e.title,
+                            isClicked: e.name == storeItem,
+                          ),
+                        ))
+                    .toList(),
+              ),
             ),
           ),
       ],
