@@ -15,19 +15,21 @@ Future<List<StoreItemEntity>> storeItems(Ref ref, String url) async {
 
 @riverpod
 class SelectedCategory extends _$SelectedCategory {
-  late List<StoreCategoryEntity> categoryList;
+  late Map<String, StoreCategoryEntity> categoryList;
 
   @override
   Future<(String, String)> build() async {
     final usecase = GetIt.instance.get<StoreUsecase>();
     categoryList = await usecase.getCategoryList();
-    return (categoryList.first.category, categoryList.first.store.first.name);
+    return (
+      categoryList.entries.first.key,
+      categoryList.entries.first.value.store.first.name
+    );
   }
 
   void setCategory(String category) {
-    var store =
-        categoryList.firstWhere((e) => e.category == category).store.first;
-    state = AsyncValue.data((category, store.name));
+    var store = categoryList[category]?.store.first;
+    state = AsyncValue.data((category, store?.name ?? ''));
   }
 
   void setStore(String store) {

@@ -7,8 +7,11 @@ class StoreUsecase {
 
   StoreUsecase({required this.storeRepository});
 
-  Future<List<StoreCategoryEntity>> getCategoryList() async {
-    return storeRepository.getCategoryList();
+  Future<Map<String, StoreCategoryEntity>> getCategoryList() async {
+    var categoryList = await storeRepository.getCategoryList();
+    return categoryList
+        .asMap()
+        .map((key, value) => MapEntry(value.category, value));
   }
 
   Future<List<StoreItemEntity>> getStoreItems(String url) async {
