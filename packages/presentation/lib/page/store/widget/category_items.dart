@@ -63,7 +63,7 @@ class CategoryStoreItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 80,
       child: Column(
         children: [
