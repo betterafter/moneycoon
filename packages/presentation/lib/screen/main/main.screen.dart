@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:presentation/page/booup/booup.page.dart';
 import 'package:presentation/page/home/home.page.dart';
 import 'package:presentation/page/my/my.page.dart';
-import 'package:presentation/page/reviewers/reviewers.page.dart';
 import 'package:presentation/page/store/store.page.dart';
 import 'package:presentation/screen/main/riverpod/bottom_navigation_bar.rp.dart';
 import 'package:presentation/util/color.dart';
@@ -13,9 +11,7 @@ class MainScreen extends ConsumerWidget {
 
   static const List<Widget> _pages = [
     HomePage(),
-    BooupPage(),
     StorePage(),
-    ReviewersPage(),
     MyPage(),
   ];
 
@@ -50,18 +46,6 @@ class MainScreen extends ConsumerWidget {
             ),
             BottomNavigationBarItem(
               icon: _inactiveIcon(
-                icon: Icons.money_rounded,
-                label: '부업',
-              ),
-              activeIcon: _activeIcon(
-                icon: Icons.money_rounded,
-                label: '부업',
-                color: Colors.amber,
-              ),
-              label: '부업',
-            ),
-            BottomNavigationBarItem(
-              icon: _inactiveIcon(
                 icon: Icons.card_giftcard_rounded,
                 label: '상점',
               ),
@@ -71,18 +55,6 @@ class MainScreen extends ConsumerWidget {
                 color: AppColor.primaryGreen,
               ),
               label: '상점',
-            ),
-            BottomNavigationBarItem(
-              icon: _inactiveIcon(
-                icon: Icons.reviews_rounded,
-                label: '체험단',
-              ),
-              activeIcon: _activeIcon(
-                icon: Icons.reviews_rounded,
-                label: '체험단',
-                color: Colors.red,
-              ),
-              label: '체험단',
             ),
             BottomNavigationBarItem(
               icon: _inactiveIcon(

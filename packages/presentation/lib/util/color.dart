@@ -11,7 +11,10 @@ class AppColor {
   static const Color bronze = Color.fromARGB(255, 212, 142, 22);
 
   static const Color primaryGrey = Color.fromARGB(255, 94, 94, 94);
+  static const Color secondaryGrey = Color.fromARGB(255, 211, 211, 211);
   static const Color dividerGrey = Color.fromARGB(255, 243, 243, 243);
   static const Color iconGrey = Color.fromARGB(255, 189, 189, 189);
   static const Color backgroundGrey = Color.fromARGB(255, 237, 241, 244);
+
+  static const Color defaultTransparent = Colors.transparent;
 }

@@ -1,0 +1,58 @@
+[
+    {
+        "category": "cafe",
+        "title": "카페",
+        "icon": "https://cdn-icons-png.flaticon.com/128/16985/16985420.png",
+        "store": [
+            {
+                "name": "starbucks",
+                "title": "스타벅스",
+                "icon": "https://play-lh.googleusercontent.com/Cwfy02UAtHpNdJczuZXUgQ7LikGGBuv8CxIfL9utjcEcGz7_9j1fItnQSxW_w9WahNw=w480-h960-rw"
+            },
+            {
+                "name": "two_some_place",
+                "title": "투썸플레이스",
+                "icon": "https://play-lh.googleusercontent.com/WfaBqjSK3pvK_Ne7INGfxZwqstNkfEQpidTbl1f68e8ves1YvLr7VNR8UUJHwuTTeCM=w480-h960-rw"
+            }
+        ]
+    },
+    {
+        "category": "conv_store",
+        "title": "편의점",
+        "icon": "https://cdn-icons-png.flaticon.com/128/7219/7219906.png",
+        "store": [
+            {
+                "name": "cu",
+                "title": "CU",
+                "icon": "https://play-lh.googleusercontent.com/dipiXa5mekfIkjxfIGz00vdupS7Mh_9m3LnwP393wBSNmwWQYW-1junU4LT--ZoEtgtM"
+            },
+            {
+                "name": "gs",
+                "title": "GS25",
+                "icon": "https://play-lh.googleusercontent.com/uvIlmWf3dNy5IwDK-mAGCvB253mc3AJJoJ_imPU9epIHU-81gjU7NXL9PP_WlUcOnvE=w480-h960-rw"
+            }
+        ]
+    },
+    {
+        "category": "fastfood",
+        "title": "햄버거",
+        "icon": "https://cdn-icons-png.flaticon.com/128/3075/3075929.png",
+        "store": [
+            {
+                "name": "bugerking",
+                "title": "버거킹",
+                "icon": "https://play-lh.googleusercontent.com/EbYnU_5SVkFanwYa6-skV34XMU87hduLIArsvi902Qv5-yrh9PKRdIHdvcOKI--on7E=w480-h960-rw"
+            },
+            {
+                "name": "lotteria",
+                "title": "롯데리아",
+                "icon": "https://play-lh.googleusercontent.com/RIcKjIEMNsTPsdM1ScIQ_UpRDEo0HPUAhLqtxyPaFl-M2pWGD0dolflddjnrW60N_x8=w480-h960-rw"
+            },
+            {
+                "name": "macdonald",
+                "title": "맥도날드",
+                "icon": "https://play-lh.googleusercontent.com/0loj-whL4XSeF4v5W3d213b1pH0RRTQUlmK1VESE-Rsydp06rVyPTq_Hwpwm1avB8URL=w480-h960-rw"
+            }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "통새우크런KIM버거",
+        "price": 7700,
+        "imgUrl": "https://img.lotteeatz.com/upload/product/2024/08/21/20240821170601796_2.png"
+    },
+    {
+        "name": "불고기포텐버거",
+        "price": 7700,
+        "imgUrl": "https://img.lotteeatz.com/upload/product/2024/07/18/20240718092051145_6.png"
+    },
+    {
+        "name": "전주 비빔라이스 버거",
+        "price": 6900,
+        "imgUrl": "https://img.lotteeatz.com/upload/product/2023/02/03/20230203180810686_7.png"
+    },
+    {
+        "name": "더블 데리버거",
+        "price": 4700,
+        "imgUrl": "https://img.lotteeatz.com/upload/product/2023/03/21/20230321151944859_2.png"
+    }
+]

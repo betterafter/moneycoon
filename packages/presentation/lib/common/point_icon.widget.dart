@@ -1,41 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:presentation/common/point.widget.dart';
+import 'package:presentation/util/color.dart';
 
-class PointIconWidget extends StatelessWidget {
-  final Color? borderColor;
-  final Color? backgroundColor;
-  final Color? textColor;
-  final double? size;
+class PointButtonWidget extends StatelessWidget {
+  final int point;
 
-  const PointIconWidget({
+  const PointButtonWidget({
     super.key,
-    this.borderColor = Colors.amber,
-    this.backgroundColor = Colors.amber,
-    this.textColor = Colors.white,
-    this.size = 24,
+    required this.point,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: size,
-      height: size,
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        color: backgroundColor ?? Colors.grey,
         borderRadius: BorderRadius.circular(100),
-        border: Border.all(
-          color: borderColor ?? Colors.grey,
-          width: 1.5,
-        ),
+        border: Border.all(color: AppColor.secondaryGrey),
       ),
-      child: Text(
-        'C',
-        style: TextStyle(
-          color: textColor,
-          fontWeight: FontWeight.bold,
-          fontSize: size! * 18 / 24,
-          height: 1.2,
-        ),
-        textAlign: TextAlign.center,
+      child: Row(
+        children: [
+          const PointWidget(
+            size: 12,
+          ),
+          const SizedBox(width: 4),
+          Text(
+            point.toString(),
+            style: const TextStyle(
+              fontSize: 14,
+              color: AppColor.primaryBlack,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 0,
+            ),
+          ),
+        ],
       ),
     );
   }

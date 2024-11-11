@@ -91,7 +91,7 @@ class BottomRankingSectionItemWidget extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(width: 4),
-                const PointWidget(fontSize: 8),
+                const PointWidget(size: 8),
                 const SizedBox(width: 12),
                 Icon(
                   rankerDetailClick
@@ -131,7 +131,7 @@ class BottomRankingSectionItemWidget extends ConsumerWidget {
                           ),
                         ),
                         const SizedBox(width: 4),
-                        const PointWidget(fontSize: 8),
+                        const PointWidget(size: 8),
                       ],
                     ),
                     const SizedBox(height: 12),
@@ -154,7 +154,7 @@ class BottomRankingSectionItemWidget extends ConsumerWidget {
                           ),
                         ),
                         const SizedBox(width: 4),
-                        const PointWidget(fontSize: 8),
+                        const PointWidget(size: 8),
                       ],
                     )
                   ],
